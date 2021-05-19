@@ -15,7 +15,8 @@ public enum BillKeyword {
     ELECTRICITY_SUPPLY("електропостачання"),
     CENTRAL_HEATING("за опалення"),
     CENTRAL_HEATING_CONTRIBUTIONS("внески за централізоване опалення"),
-    INTERNET("Фринет"),
+    INTERNET_COMPANY_RU("Фринет"),
+    INTERNET_COMPANY_ENG("Freenet"),
     HOUSEHOLD("утримання буд");
     private String originalPhrase;
 

@@ -106,8 +106,8 @@ public enum BillType {
                     .addItem(".")
                     .addItem(new NameItem(PAID, NameBuilder::dateToDay))
     ),
-    INTERNET(
-            BillKeyword.INTERNET.getOriginalPhrase(),
+    INTERNET_EASYPAY(
+            BillKeyword.INTERNET_COMPANY_RU.getOriginalPhrase(),
             new NameBuilder()
                     .addItem("Інтернет_")
                     .addItem(new NameItem(INTERNET_PAY_DATE, NameBuilder::dateToYear))
@@ -115,6 +115,16 @@ public enum BillType {
                     .addItem(new NameItem(INTERNET_PAY_DATE, NameBuilder::dateToMonth))
                     .addItem(".")
                     .addItem(new NameItem(INTERNET_PAY_DATE, NameBuilder::dateToDay))
+    ),
+    INTERNET_MONOBANK(
+            BillKeyword.INTERNET_COMPANY_ENG.getOriginalPhrase(),
+            new NameBuilder()
+                    .addItem("Інтернет_")
+                    .addItem(new NameItem(PAID, NameBuilder::dateToYear))
+                    .addItem(".")
+                    .addItem(new NameItem(PAID, NameBuilder::dateToMonth))
+                    .addItem(".")
+                    .addItem(new NameItem(PAID, NameBuilder::dateToDay))
     );
 
     private String keyString;
