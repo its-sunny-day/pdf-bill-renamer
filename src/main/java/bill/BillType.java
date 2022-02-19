@@ -135,6 +135,26 @@ public enum BillType {
                     .addItem(new NameItem(PAID, NameBuilder::dateToMonth))
                     .addItem(".")
                     .addItem(new NameItem(PAID, NameBuilder::dateToDay))
+    ),
+    HOT_WATER_SERVICE_FEE_MONOBANK(
+            BillKeyword.HOT_WATER_SERVICE_FEE.getOriginalPhrase(),
+            new NameBuilder()
+                    .addItem("ГВ_обслуговування_")
+                    .addItem(new NameItem(PAID, NameBuilder::dateToYear))
+                    .addItem(".")
+                    .addItem(new NameItem(PAID, NameBuilder::dateToMonth))
+                    .addItem(".")
+                    .addItem(new NameItem(PAID, NameBuilder::dateToDay))
+    ),
+    CENTRAL_HEATING_SERVICE_FEE_MONOBANK(
+            BillKeyword.CENTRAL_HEATING_SERVICE_FEE.getOriginalPhrase(),
+            new NameBuilder()
+                    .addItem("ЦО_обслуговування_")
+                    .addItem(new NameItem(PAID, NameBuilder::dateToYear))
+                    .addItem(".")
+                    .addItem(new NameItem(PAID, NameBuilder::dateToMonth))
+                    .addItem(".")
+                    .addItem(new NameItem(PAID, NameBuilder::dateToDay))
     );
 
     private String keyString;
