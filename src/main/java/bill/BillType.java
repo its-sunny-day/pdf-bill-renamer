@@ -116,10 +116,20 @@ public enum BillType {
                     .addItem(".")
                     .addItem(new NameItem(INTERNET_PAY_DATE, NameBuilder::dateToDay))
     ),
-    INTERNET_MONOBANK(
-            BillKeyword.INTERNET_COMPANY_ENG.getOriginalPhrase(),
+    INTERNET_O3_MONOBANK(
+            BillKeyword.INTERNET_COMPANY_O3_ENG.getOriginalPhrase(),
             new NameBuilder()
-                    .addItem("Інтернет_")
+                    .addItem("Інтернет_O3_")
+                    .addItem(new NameItem(PAID, NameBuilder::dateToYear))
+                    .addItem(".")
+                    .addItem(new NameItem(PAID, NameBuilder::dateToMonth))
+                    .addItem(".")
+                    .addItem(new NameItem(PAID, NameBuilder::dateToDay))
+    ),
+    INTERNET_VEGA_MONOBANK(
+            INTERNET_COMPANY_VEGA_UA.getOriginalPhrase(),
+            new NameBuilder()
+                    .addItem("Інтернет_Вега_")
                     .addItem(new NameItem(PAID, NameBuilder::dateToYear))
                     .addItem(".")
                     .addItem(new NameItem(PAID, NameBuilder::dateToMonth))
