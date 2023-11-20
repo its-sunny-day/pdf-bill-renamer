@@ -1,5 +1,6 @@
 package bill.name;
 
+import bill.BillType;
 import bill.parser.BillParser;
 
 import java.text.ParseException;
@@ -7,7 +8,7 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 
 public class NameBuilder {
-    private List<Object> items = new ArrayList<Object>();
+    private final List<Object> items = new ArrayList<>();
 
     public NameBuilder addItem(String txt) {
         this.items.add(txt);
@@ -44,6 +45,11 @@ public class NameBuilder {
             if (item instanceof NameItem) {
                 NameItem i = (NameItem) item;
                 String strItem = parser.findItemByPrefix(i.getItemPrefix(), i.getSectionPrefix());
+                if (strItem == null) {
+                    throw new ParseException("File doesn't contain item with itemPrefix=" + i.getItemPrefix() +
+                            " sectionPrefix=" + i.getSectionPrefix() +
+                            " File=" + parser.getFile().getName(), 0);
+                }
                 if (i.getConverter() != null) {
                     strItem = i.getConverter().apply(strItem);
                 }

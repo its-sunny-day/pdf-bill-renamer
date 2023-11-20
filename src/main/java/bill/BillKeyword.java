@@ -1,7 +1,7 @@
 package bill;
 
 public enum BillKeyword {
-    PAID("СПЛАЧЕНО"),
+    PAID("ДАТА І ЧАС ПРОВЕДЕННЯ ОПЕРАЦІЇ"),
     INTERNET_PAY_DATE("Дата:"),
     COUNTER1("Лічильник №1"),
     COUNTER2("Лічильник №2"),
@@ -10,9 +10,9 @@ public enum BillKeyword {
     //Keywords for different types of bill
     GARBAGE_COLLECTION("вивезення побутових відходів"),
     HOT_WATER_DRAINAGE("водовідведення гарячої води"),
-    HOT_WATER_SUPPLY("остачання гарячої води"),
-    COLD_WATER_SUPPLY("за холодну воду"),
-    ELECTRICITY_SUPPLY("електропостачання"),
+    HOT_WATER_SUPPLY("ГВ,"),
+    COLD_WATER_SUPPLY("ХВ,"),
+    ELECTRICITY_SUPPLY("Е/Е"),
     INTERNET_COMPANY_RU("Фринет"),
     INTERNET_COMPANY_O3_ENG("Freenet"),
     INTERNET_COMPANY_VEGA_UA("Фарлеп"),
@@ -20,9 +20,9 @@ public enum BillKeyword {
     CENTRAL_HEATING("за опалення"),
     CENTRAL_HEATING_CONTRIBUTIONS("внески за централізоване опалення"),
     //Most probably the same as CENTRAL_HEATING_CONTRIBUTIONS, but newer version of bill
-    CENTRAL_HEATING_SERVICE_FEE("за абонентське обслуговування (теплова енергія)"),
+    CENTRAL_HEATING_SERVICE_FEE("абонен. обслугов. (ТЕ)"),
     COLD_WATER_SERVICE_FEE("за абонентське обслуговування,"),
-    HOT_WATER_SERVICE_FEE("за абонентське обслуговування (гаряча вода)");
+    HOT_WATER_SERVICE_FEE("абон. обслугов.,");
     private String originalPhrase;
 
     BillKeyword(String originalPhrase) {

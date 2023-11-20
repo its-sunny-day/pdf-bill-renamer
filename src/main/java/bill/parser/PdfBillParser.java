@@ -14,6 +14,7 @@ import java.util.regex.Pattern;
 
 public class PdfBillParser implements BillParser {
     String parsedFileText;
+    File file;
 
     public PdfBillParser(String fileName) throws IOException {
         File file = new File(fileName);
@@ -25,6 +26,7 @@ public class PdfBillParser implements BillParser {
     }
 
     private void init(File file) throws IOException {
+        this.file = file;
         PDDocument pdDoc = null;
         try {
             //PDFParser parser = new PDFParser(new RandomAccessFile(file, "r"));
@@ -40,7 +42,7 @@ public class PdfBillParser implements BillParser {
     }
 
     @Override
-    public String findItemByPrefix(String itemPrefix, String sectionPrefix) throws ParseException {
+    public String findItemByPrefix(String itemPrefix, String sectionPrefix) {
         if (StringUtils.isEmpty(this.parsedFileText)) {
             throw new IllegalStateException("parsedFileText is empty...");
         }
@@ -55,8 +57,7 @@ public class PdfBillParser implements BillParser {
         if (m.find()) {
             return m.group(1);
         }
-        throw new ParseException("File doesn't contain item with itemPrefix=" + itemPrefix +
-                " sectionPrefix=" + sectionPrefix, 0);
+        return null;
     }
 
     @Override
@@ -70,5 +71,10 @@ public class PdfBillParser implements BillParser {
     @Override
     public String getFileExtension() {
         return "pdf";
+    }
+
+    @Override
+    public File getFile() {
+        return this.file;
     }
 }
