@@ -1,7 +1,7 @@
 package bill;
 
 public enum BillKeyword {
-    PAID("ДАТА І ЧАС ПРОВЕДЕННЯ ОПЕРАЦІЇ"),
+    PAID("Дата і час операції"),
     INTERNET_PAY_DATE("Дата:"),
     COUNTER1("Лічильник №1"),
     COUNTER2("Лічильник №2"),
@@ -10,9 +10,9 @@ public enum BillKeyword {
     //Keywords for different types of bill
     GARBAGE_COLLECTION("вивезення побутових відходів"),
     HOT_WATER_DRAINAGE("водовідведення гарячої води"),
-    HOT_WATER_SUPPLY("ГВ,"),
+    HOT_WATER_SUPPLY("за гарячу воду,"),
     COLD_WATER_SUPPLY("ХВ,"),
-    ELECTRICITY_SUPPLY("Е/Е"),
+    ELECTRICITY_SUPPLY("Електроенергія"),
     INTERNET_COMPANY_RU("Фринет"),
     INTERNET_COMPANY_O3_ENG("Freenet"),
     INTERNET_COMPANY_VEGA_UA("Фарлеп"),

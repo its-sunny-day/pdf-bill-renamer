@@ -35,14 +35,6 @@ public enum BillType {
                     .addItem(new NameItem(PAID, NameBuilder::dateToMonth))
                     .addItem(".")
                     .addItem(new NameItem(PAID, NameBuilder::dateToDay))
-                    .addItem("_")
-                    .addItem(new NameItem(PREV_VALUE, COUNTER1))
-                    .addItem("-")
-                    .addItem(new NameItem(CURRENT_VALUE, COUNTER1))
-                    .addItem("_")
-                    .addItem(new NameItem(PREV_VALUE, COUNTER2))
-                    .addItem("-")
-                    .addItem(new NameItem(CURRENT_VALUE, COUNTER2))
     ),
     COLD_WATER_SUPPLY(
             BillKeyword.COLD_WATER_SUPPLY.getOriginalPhrase(),
@@ -53,10 +45,6 @@ public enum BillType {
                     .addItem(new NameItem(PAID, NameBuilder::dateToMonth))
                     .addItem(".")
                     .addItem(new NameItem(PAID, NameBuilder::dateToDay))
-                    .addItem("_")
-                    .addItem(new NameItem(PREV_VALUE, COUNTER1))
-                    .addItem("-")
-                    .addItem(new NameItem(CURRENT_VALUE, COUNTER1))
     ),
     HOT_WATER_DRAINAGE(
             BillKeyword.HOT_WATER_DRAINAGE.getOriginalPhrase(),
@@ -67,10 +55,6 @@ public enum BillType {
                     .addItem(new NameItem(PAID, NameBuilder::dateToMonth))
                     .addItem(".")
                     .addItem(new NameItem(PAID, NameBuilder::dateToDay))
-                    .addItem("_")
-                    .addItem(new NameItem(PREV_VALUE, COUNTER1))
-                    .addItem("-")
-                    .addItem(new NameItem(CURRENT_VALUE, COUNTER1))
     ),
     ELECTRICITY_SUPPLY(
             BillKeyword.ELECTRICITY_SUPPLY.getOriginalPhrase(),
@@ -81,10 +65,6 @@ public enum BillType {
                     .addItem(new NameItem(PAID, NameBuilder::dateToMonth))
                     .addItem(".")
                     .addItem(new NameItem(PAID, NameBuilder::dateToDay))
-                    .addItem("_")
-                    .addItem(new NameItem(PREV_VALUE, COUNTER1))
-                    .addItem("-")
-                    .addItem(new NameItem(CURRENT_VALUE, COUNTER1))
     ),
     CENTRAL_HEATING(
             BillKeyword.CENTRAL_HEATING.getOriginalPhrase(),
