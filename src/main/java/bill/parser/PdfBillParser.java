@@ -8,7 +8,6 @@ import org.apache.pdfbox.text.PDFTextStripper;
 
 import java.io.File;
 import java.io.IOException;
-import java.text.ParseException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -29,7 +28,6 @@ public class PdfBillParser implements BillParser {
         this.file = file;
         PDDocument pdDoc = null;
         try {
-            //PDFParser parser = new PDFParser(new RandomAccessFile(file, "r"));
             PDFParser parser = new PDFParser(new RandomAccessReadMemoryMappedFile(file));
             pdDoc = parser.parse();
             PDFTextStripper pdfStripper = new PDFTextStripper();

@@ -14,7 +14,8 @@ import java.util.stream.Collectors;
 public class Runner {
     public static void main(String args[]) {
         try {
-            String sourceDirURI = "C:\\Users\\igak0913\\projects\\pdf-bill-renamer\\bills";
+            System.out.println("Working Directory = " + System.getProperty("user.dir"));
+            String sourceDirURI = System.getProperty("user.dir") + "\\bills";
             Path sourceDirPath = Paths.get(sourceDirURI);
             Path dstDirPath = Paths.get(sourceDirURI, "result");
             Files.createDirectories(dstDirPath);

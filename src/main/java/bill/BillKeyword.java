@@ -9,7 +9,7 @@ public enum BillKeyword {
     CURRENT_VALUE("поточні"),
     //Keywords for different types of bill
     GARBAGE_COLLECTION("вивезення побутових відходів"),
-    HOT_WATER_DRAINAGE("водовідведення гарячої води"),
+    HOT_WATER_DRAINAGE("Вoдoвідв. ГВ"),
     HOT_WATER_SUPPLY("за гарячу воду,"),
     COLD_WATER_SUPPLY("ХВ,"),
     ELECTRICITY_SUPPLY("Електроенергія"),
